@@ -1,0 +1,74 @@
+{
+  "D": {
+    "name": "Dominance",
+    "title": "The Director",
+    "description": "You are direct, decisive, and driven. You focus on accomplishing goals, getting results, and overcoming challenges. You value competency, action, concrete results, and personal freedom.",
+    "strengths": [
+      "Problem-solving",
+      "Decision making",
+      "Risk-taking",
+      "Taking initiative"
+    ],
+    "challenges": [
+      "May appear insensitive or impatient",
+      "Can be too direct or controlling",
+      "Might overlook details",
+      "May struggle with emotional situations"
+    ],
+    "workStyle": "You work quickly and efficiently, focusing on the big picture. You prefer autonomy and direct communication."
+  },
+  "I": {
+    "name": "Influence",
+    "title": "The Socializer",
+    "description": "You are outgoing, enthusiastic, and optimistic. You enjoy interacting with others and tend to be persuasive. You value social recognition, group activities, and relationships.",
+    "strengths": [
+      "Communication",
+      "Networking",
+      "Persuasion",
+      "Generating enthusiasm"
+    ],
+    "challenges": [
+      "May talk more than listen",
+      "Can be disorganized",
+      "Might fear rejection",
+      "May struggle with follow-through"
+    ],
+    "workStyle": "You thrive in collaborative, people-oriented environments. You prefer variety and social interaction in your work."
+  },
+  "S": {
+    "name": "Steadiness",
+    "title": "The Supporter",
+    "description": "You are patient, loyal, and reliable. You prefer cooperation over competition and value harmony, stability, and supporting others. You are an excellent team player.",
+    "strengths": [
+      "Listening",
+      "Teamwork",
+      "Reliability",
+      "Creating harmony"
+    ],
+    "challenges": [
+      "May resist change",
+      "Can be overly accommodating",
+      "Might avoid confrontation",
+      "May struggle with quick decisions"
+    ],
+    "workStyle": "You work at a steady pace and prefer stable, predictable environments. You excel at creating consensus and supporting team members."
+  },
+  "C": {
+    "name": "Conscientiousness",
+    "title": "The Analyzer",
+    "description": "You are analytical, systematic, and precise. You focus on accuracy, quality, and logical thinking. You value expertise, competency, and attention to detail.",
+    "strengths": [
+      "Critical thinking",
+      "Attention to detail",
+      "Organization",
+      "Problem analysis"
+    ],
+    "challenges": [
+      "May be overly critical",
+      "Can be perfectionistic",
+      "Might overthink decisions",
+      "May struggle with spontaneity"
+    ],
+    "workStyle": "You work methodically and precisely, focusing on quality and accuracy. You prefer clear expectations and time to analyze before acting."
+  }
+}

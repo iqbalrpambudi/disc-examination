@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "question": "In a social situation, I tend to:",
+    "options": [
+      { "text": "Take charge and lead conversations", "type": "D" },
+      { "text": "Be enthusiastic and inspire others", "type": "I" },
+      { "text": "Listen carefully and support others", "type": "S" },
+      { "text": "Analyze the situation before engaging", "type": "C" }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "When facing a challenge, I typically:",
+    "options": [
+      { "text": "Take immediate action to solve it", "type": "D" },
+      { "text": "Look for creative and fun solutions", "type": "I" },
+      { "text": "Consider how it affects everyone involved", "type": "S" },
+      { "text": "Gather all information before deciding", "type": "C" }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "In a team project, I prefer to:",
+    "options": [
+      { "text": "Lead and make key decisions", "type": "D" },
+      { "text": "Bring energy and motivate the team", "type": "I" },
+      { "text": "Ensure everyone works well together", "type": "S" },
+      { "text": "Focus on accuracy and quality", "type": "C" }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "When communicating with others, I tend to be:",
+    "options": [
+      { "text": "Direct and to the point", "type": "D" },
+      { "text": "Expressive and animated", "type": "I" },
+      { "text": "Patient and diplomatic", "type": "S" },
+      { "text": "Precise and detailed", "type": "C" }
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Under pressure, I am likely to:",
+    "options": [
+      { "text": "Take control and push forward", "type": "D" },
+      { "text": "Stay optimistic and improvise", "type": "I" },
+      { "text": "Remain calm and supportive", "type": "S" },
+      { "text": "Focus on solving problems methodically", "type": "C" }
+    ]
+  },
+  {
+    "id": 6,
+    "question": "I value most in my work environment:",
+    "options": [
+      { "text": "Results and achievements", "type": "D" },
+      { "text": "Recognition and social interaction", "type": "I" },
+      { "text": "Stability and cooperation", "type": "S" },
+      { "text": "Accuracy and logical processes", "type": "C" }
+    ]
+  },
+  {
+    "id": 7,
+    "question": "When making decisions, I typically:",
+    "options": [
+      { "text": "Decide quickly based on outcomes", "type": "D" },
+      { "text": "Consider what feels right and exciting", "type": "I" },
+      { "text": "Think about how it affects others", "type": "S" },
+      { "text": "Analyze all options systematically", "type": "C" }
+    ]
+  },
+  {
+    "id": 8,
+    "question": "My preferred pace of work is:",
+    "options": [
+      { "text": "Fast and focused on results", "type": "D" },
+      { "text": "Energetic with variety", "type": "I" },
+      { "text": "Steady and consistent", "type": "S" },
+      { "text": "Methodical and thorough", "type": "C" }
+    ]
+  },
+  {
+    "id": 9,
+    "question": "When dealing with rules, I tend to:",
+    "options": [
+      { "text": "Challenge them if they block progress", "type": "D" },
+      { "text": "Find creative ways to work with them", "type": "I" },
+      { "text": "Follow them to maintain harmony", "type": "S" },
+      { "text": "Adhere to them precisely", "type": "C" }
+    ]
+  },
+  {
+    "id": 10,
+    "question": "My ideal role in a team is:",
+    "options": [
+      { "text": "The leader who drives action", "type": "D" },
+      { "text": "The motivator who inspires others", "type": "I" },
+      { "text": "The supporter who creates harmony", "type": "S" },
+      { "text": "The analyst who ensures quality", "type": "C" }
+    ]
+  }
+]
