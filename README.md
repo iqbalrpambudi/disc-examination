@@ -14,8 +14,11 @@ DISC is a behavior assessment tool based on the DISC theory of psychologist Will
 ## Features
 
 - Interactive DISC assessment with 10 questions
-- Real-time progress tracking
+- Email input requirement before taking the test
+- Real-time progress tracking with test duration timer
 - Detailed results with personality profile information
+- PDF generation and download of test results
+- Email functionality to send results to the user and HR
 - Responsive design for all device sizes
 - Dark mode support
 
@@ -25,6 +28,9 @@ DISC is a behavior assessment tool based on the DISC theory of psychologist Will
 - [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
 - [React Context API](https://reactjs.org/docs/context.html) - State management
+- [jsPDF](https://github.com/MrRio/jsPDF) - PDF generation
+- [html2canvas](https://github.com/niklasvh/html2canvas) - HTML to canvas conversion for PDF
+- [Nodemailer](https://nodemailer.com/) - Email sending functionality
 
 ## Getting Started
 
@@ -50,7 +56,19 @@ npm install
 yarn install
 ```
 
-3. Run the development server
+3. Configure email settings
+
+Create a `.env.local` file in the root directory with the following variables:
+
+```
+EMAIL_USER=your-gmail-address@gmail.com
+EMAIL_PASSWORD=your-app-password
+HR_EMAIL=hr@company.com
+```
+
+Note: For Gmail, you'll need to use an App Password. See [Google's documentation](https://support.google.com/accounts/answer/185833) for more information.
+
+4. Run the development server
 
 ```bash
 npm run dev
@@ -58,7 +76,7 @@ npm run dev
 yarn dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application
 
 ## Project Structure
 
@@ -66,11 +84,17 @@ yarn dev
 /src
   /app                  # Next.js app router pages
     /page.tsx           # Home page
+    /email/page.tsx     # Email input page
     /test/page.tsx      # Test page
     /results/page.tsx   # Results page
+    /api                # API routes
+      /send-email       # Email sending API
   /components           # Reusable components
   /context              # React context for state management
   /data                 # JSON data for questions and profiles
+  /utils                # Utility functions
+    /emailService.ts    # Email service
+    /pdfGenerator.ts    # PDF generation utilities
 ```
 
 ## License

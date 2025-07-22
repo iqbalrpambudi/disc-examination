@@ -31,8 +31,8 @@ export default function Header() {
             </Link>
             
             <Link 
-              href="/test" 
-              className={`px-3 py-2 rounded-md text-sm font-medium ${pathname.startsWith('/test') 
+              href="/email" 
+              className={`px-3 py-2 rounded-md text-sm font-medium ${pathname.startsWith('/email') || pathname.startsWith('/test')
                 ? 'text-indigo-600 dark:text-indigo-400' 
                 : 'text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400'}`}
               onClick={resetTest}

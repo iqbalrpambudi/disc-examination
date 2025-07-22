@@ -53,7 +53,7 @@ export default function Home() {
         
         <div className="flex justify-center">
           <Link 
-            href="/test"
+            href="/email"
             className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-8 rounded-full transition-colors duration-200 flex items-center justify-center"
           >
             Start Assessment

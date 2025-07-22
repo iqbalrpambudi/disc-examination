@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode, useRef } from 'react';
 import questionsData from '@/data/disc-questions.json';
 import profiles from '@/data/disc-profiles.json';
 
@@ -38,12 +38,19 @@ export type DISCContextType = {
   scores: Scores;
   dominantType: string | null;
   profiles: Record<string, Profile>;
+  userEmail: string;
+  setUserEmail: (email: string) => void;
+  testStartTime: Date | null;
+  testEndTime: Date | null;
+  testDuration: number | null; // in seconds
   setAnswer: (questionId: number, option: Option) => void;
   nextQuestion: () => void;
   prevQuestion: () => void;
   calculateResults: () => void;
   resetTest: () => void;
   isTestCompleted: boolean;
+  isEmailSubmitted: boolean;
+  startTest: () => void;
 };
 
 // Type assertion to ensure the imported questions match our defined Question type
@@ -64,6 +71,11 @@ export const DISCProvider = ({ children }: { children: ReactNode }) => {
   const [scores, setScores] = useState<Scores>(initialScores);
   const [dominantType, setDominantType] = useState<string | null>(null);
   const [isTestCompleted, setIsTestCompleted] = useState(false);
+  const [userEmail, setUserEmail] = useState<string>('');
+  const [isEmailSubmitted, setIsEmailSubmitted] = useState(false);
+  const [testStartTime, setTestStartTime] = useState<Date | null>(null);
+  const [testEndTime, setTestEndTime] = useState<Date | null>(null);
+  const [testDuration, setTestDuration] = useState<number | null>(null);
 
   const setAnswer = (questionId: number, option: Option) => {
     setAnswers((prev) => ({
@@ -107,6 +119,43 @@ export const DISCProvider = ({ children }: { children: ReactNode }) => {
 
     setDominantType(maxType);
     setIsTestCompleted(true);
+    
+    // Record test end time and calculate duration
+    const endTime = new Date();
+    setTestEndTime(endTime);
+    
+    if (testStartTime) {
+      const durationInSeconds = Math.floor((endTime.getTime() - testStartTime.getTime()) / 1000);
+      setTestDuration(durationInSeconds);
+    }
+    
+    // Send email with test results
+    if (userEmail && maxType) {
+      sendResultsEmail(userEmail, maxType, newScores);
+    }
+  };
+
+  const sendResultsEmail = async (email: string, dominantType: string, scores: Scores) => {
+    try {
+      const response = await fetch('/api/send-results', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          dominantType,
+          scores,
+          testDuration: testDuration || 0,
+        }),
+      });
+      
+      if (!response.ok) {
+        console.error('Failed to send results email');
+      }
+    } catch (error) {
+      console.error('Error sending results email:', error);
+    }
   };
 
   const resetTest = () => {
@@ -115,6 +164,15 @@ export const DISCProvider = ({ children }: { children: ReactNode }) => {
     setScores(initialScores);
     setDominantType(null);
     setIsTestCompleted(false);
+    setTestStartTime(null);
+    setTestEndTime(null);
+    setTestDuration(null);
+    // Don't reset email when retaking the test
+  };
+  
+  const startTest = () => {
+    setIsEmailSubmitted(true);
+    setTestStartTime(new Date());
   };
 
   return (
@@ -126,12 +184,19 @@ export const DISCProvider = ({ children }: { children: ReactNode }) => {
         scores,
         dominantType,
         profiles,
+        userEmail,
+        setUserEmail,
+        testStartTime,
+        testEndTime,
+        testDuration,
         setAnswer,
         nextQuestion,
         prevQuestion,
         calculateResults,
         resetTest,
         isTestCompleted,
+        isEmailSubmitted,
+        startTest,
       }}
     >
       {children}

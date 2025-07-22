@@ -14,10 +14,34 @@ export default function TestPage() {
     nextQuestion,
     prevQuestion,
     calculateResults,
+    isEmailSubmitted,
+    testStartTime,
   } = useDISC();
+  
+  const [elapsedTime, setElapsedTime] = useState(0);
+  
+  // Redirect to email page if email is not submitted
+  useEffect(() => {
+    if (!isEmailSubmitted) {
+      router.push('/email');
+    }
+  }, [isEmailSubmitted, router]);
 
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const question = questions[currentQuestion];
+  
+  // Timer effect
+  useEffect(() => {
+    if (!testStartTime) return;
+    
+    const timer = setInterval(() => {
+      const now = new Date();
+      const seconds = Math.floor((now.getTime() - testStartTime.getTime()) / 1000);
+      setElapsedTime(seconds);
+    }, 1000);
+    
+    return () => clearInterval(timer);
+  }, [testStartTime]);
 
   // Set selected option based on existing answers
   useEffect(() => {
@@ -51,6 +75,11 @@ export default function TestPage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-6">
       <main className="max-w-3xl w-full bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 md:p-12">
+        <div className="flex justify-end mb-2">
+          <div className="bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full text-sm font-medium">
+            Time: {Math.floor(elapsedTime / 60)}:{(elapsedTime % 60).toString().padStart(2, '0')}
+          </div>
+        </div>
         <div className="mb-8">
           <div className="flex justify-between text-sm mb-2">
             <span>Question {currentQuestion + 1} of {questions.length}</span>
