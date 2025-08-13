@@ -1,8 +1,9 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useDISC } from '@/context/DISCContext';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useDISC } from "@/context/DISCContext";
+import Image from "next/image";
 
 export default function Header() {
   const pathname = usePathname();
@@ -13,30 +14,38 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center" onClick={() => pathname === '/' ? resetTest() : null}>
-              <span className="text-xl font-bold text-indigo-600 dark:text-indigo-400">DISC</span>
-              <span className="ml-1 text-xl font-semibold">Assessment</span>
+            <Link
+              href="/"
+              className="flex items-center space-x-4"
+              onClick={() => (pathname === "/" ? resetTest() : null)}>
+              {/* Company Logos */}
+              <div className="flex items-center space-x-3">
+                <Image width={100} height={32} src="/sunfish.png" alt="SunFish" className="h-8 w-auto" />
+                <Image width={100} height={32} src="/dataon.png" alt="DataOn" className="h-8 w-auto" />
+              </div>
             </Link>
           </div>
-          
-          <nav className="flex space-x-4">
-            <Link 
-              href="/" 
-              className={`px-3 py-2 rounded-md text-sm font-medium ${pathname === '/' 
-                ? 'text-indigo-600 dark:text-indigo-400' 
-                : 'text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400'}`}
-              onClick={resetTest}
-            >
+
+          <nav className="flex items-center space-x-4">
+            <Link
+              href="/"
+              className={`px-3 py-2 rounded-md text-sm font-medium ${
+                pathname === "/"
+                  ? "text-indigo-600 dark:text-indigo-400"
+                  : "text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400"
+              }`}
+              onClick={resetTest}>
               Home
             </Link>
-            
-            <Link 
-              href="/email" 
-              className={`px-3 py-2 rounded-md text-sm font-medium ${pathname.startsWith('/email') || pathname.startsWith('/test')
-                ? 'text-indigo-600 dark:text-indigo-400' 
-                : 'text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400'}`}
-              onClick={resetTest}
-            >
+
+            <Link
+              href="/email"
+              className={`px-3 py-2 rounded-md text-sm font-medium ${
+                pathname.startsWith("/email") || pathname.startsWith("/test")
+                  ? "text-indigo-600 dark:text-indigo-400"
+                  : "text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400"
+              }`}
+              onClick={resetTest}>
               Take Test
             </Link>
           </nav>
