@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, ReactNode, useRef } from 'react';
+import { createContext, useContext, useState, ReactNode } from 'react';
 import questionsData from '@/data/disc-questions.json';
 import profiles from '@/data/disc-profiles.json';
 
@@ -54,7 +54,13 @@ export type DISCContextType = {
 };
 
 // Type assertion to ensure the imported questions match our defined Question type
-const questions = questionsData as Question[];
+const allQuestions = questionsData as Question[];
+
+// Function to shuffle array and select random questions
+const getRandomQuestions = (questions: Question[], count: number): Question[] => {
+  const shuffled = [...questions].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, count);
+};
 
 const initialScores: Scores = {
   D: 0,
@@ -67,6 +73,7 @@ const DISCContext = createContext<DISCContextType | undefined>(undefined);
 
 export const DISCProvider = ({ children }: { children: ReactNode }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [questions, setQuestions] = useState<Question[]>([]);
   const [answers, setAnswers] = useState<Record<number, Option>>({});
   const [scores, setScores] = useState<Scores>(initialScores);
   const [dominantType, setDominantType] = useState<string | null>(null);
@@ -160,6 +167,7 @@ export const DISCProvider = ({ children }: { children: ReactNode }) => {
 
   const resetTest = () => {
     setCurrentQuestion(0);
+    setQuestions([]);
     setAnswers({});
     setScores(initialScores);
     setDominantType(null);
@@ -171,6 +179,9 @@ export const DISCProvider = ({ children }: { children: ReactNode }) => {
   };
   
   const startTest = () => {
+    // Select 10 random questions for this test session
+    const selectedQuestions = getRandomQuestions(allQuestions, 10);
+    setQuestions(selectedQuestions);
     setIsEmailSubmitted(true);
     setTestStartTime(new Date());
   };

@@ -21,82 +21,282 @@
   },
   {
     "id": 3,
-    "question": "In a team project, I prefer to:",
+    "question": "My ideal work environment is:",
     "options": [
-      { "text": "Lead and make key decisions", "type": "D" },
-      { "text": "Bring energy and motivate the team", "type": "I" },
-      { "text": "Ensure everyone works well together", "type": "S" },
-      { "text": "Focus on accuracy and quality", "type": "C" }
+      { "text": "Fast-paced with clear results", "type": "D" },
+      { "text": "Energetic and people-oriented", "type": "I" },
+      { "text": "Stable and team-focused", "type": "S" },
+      { "text": "Organized and detail-driven", "type": "C" }
     ]
   },
   {
     "id": 4,
-    "question": "When communicating with others, I tend to be:",
+    "question": "Under pressure, I tend to:",
     "options": [
-      { "text": "Direct and to the point", "type": "D" },
-      { "text": "Expressive and animated", "type": "I" },
-      { "text": "Patient and diplomatic", "type": "S" },
-      { "text": "Precise and detailed", "type": "C" }
+      { "text": "Push harder to get things done", "type": "D" },
+      { "text": "Try to stay positive and keep others motivated", "type": "I" },
+      { "text": "Stay calm and avoid conflict", "type": "S" },
+      { "text": "Withdraw to think things through", "type": "C" }
     ]
   },
   {
     "id": 5,
-    "question": "Under pressure, I am likely to:",
+    "question": "When working in a team, I usually:",
     "options": [
-      { "text": "Take control and push forward", "type": "D" },
-      { "text": "Stay optimistic and improvise", "type": "I" },
-      { "text": "Remain calm and supportive", "type": "S" },
-      { "text": "Focus on solving problems methodically", "type": "C" }
+      { "text": "Take the lead and delegate tasks", "type": "D" },
+      { "text": "Keep morale high and connect people", "type": "I" },
+      { "text": "Offer support and maintain harmony", "type": "S" },
+      { "text": "Focus on structure and accuracy", "type": "C" }
     ]
   },
   {
     "id": 6,
-    "question": "I value most in my work environment:",
+    "question": "I make decisions based on:",
     "options": [
-      { "text": "Results and achievements", "type": "D" },
-      { "text": "Recognition and social interaction", "type": "I" },
-      { "text": "Stability and cooperation", "type": "S" },
-      { "text": "Accuracy and logical processes", "type": "C" }
+      { "text": "Results and outcomes", "type": "D" },
+      { "text": "Gut feeling and excitement", "type": "I" },
+      { "text": "Consensus and shared values", "type": "S" },
+      { "text": "Facts and logical analysis", "type": "C" }
     ]
   },
   {
     "id": 7,
-    "question": "When making decisions, I typically:",
+    "question": "I feel most comfortable when:",
     "options": [
-      { "text": "Decide quickly based on outcomes", "type": "D" },
-      { "text": "Consider what feels right and exciting", "type": "I" },
-      { "text": "Think about how it affects others", "type": "S" },
-      { "text": "Analyze all options systematically", "type": "C" }
+      { "text": "I have control and direction", "type": "D" },
+      { "text": "I can freely express myself", "type": "I" },
+      { "text": "Everyone is working together peacefully", "type": "S" },
+      { "text": "Everything is clearly defined", "type": "C" }
     ]
   },
   {
     "id": 8,
-    "question": "My preferred pace of work is:",
+    "question": "When someone disagrees with me, I:",
     "options": [
-      { "text": "Fast and focused on results", "type": "D" },
-      { "text": "Energetic with variety", "type": "I" },
-      { "text": "Steady and consistent", "type": "S" },
-      { "text": "Methodical and thorough", "type": "C" }
+      { "text": "Stand my ground and debate", "type": "D" },
+      { "text": "Try to persuade them with enthusiasm", "type": "I" },
+      { "text": "Seek a compromise", "type": "S" },
+      { "text": "Review the facts and respond logically", "type": "C" }
     ]
   },
   {
     "id": 9,
-    "question": "When dealing with rules, I tend to:",
+    "question": "I’m most motivated by:",
     "options": [
-      { "text": "Challenge them if they block progress", "type": "D" },
-      { "text": "Find creative ways to work with them", "type": "I" },
-      { "text": "Follow them to maintain harmony", "type": "S" },
-      { "text": "Adhere to them precisely", "type": "C" }
+      { "text": "Achieving goals and winning", "type": "D" },
+      { "text": "Recognition and social interaction", "type": "I" },
+      { "text": "Stability and appreciation", "type": "S" },
+      { "text": "Accuracy and high standards", "type": "C" }
     ]
   },
   {
     "id": 10,
-    "question": "My ideal role in a team is:",
+    "question": "When starting a new project, I:",
     "options": [
-      { "text": "The leader who drives action", "type": "D" },
-      { "text": "The motivator who inspires others", "type": "I" },
-      { "text": "The supporter who creates harmony", "type": "S" },
-      { "text": "The analyst who ensures quality", "type": "C" }
+      { "text": "Jump right in and figure it out as I go", "type": "D" },
+      { "text": "Get excited and talk it through with others", "type": "I" },
+      { "text": "Plan carefully with others in mind", "type": "S" },
+      { "text": "Create a detailed plan first", "type": "C" }
+    ]
+  },
+  {
+    "id": 11,
+    "question": "I prefer communication that is:",
+    "options": [
+      { "text": "Direct and to the point", "type": "D" },
+      { "text": "Friendly and expressive", "type": "I" },
+      { "text": "Respectful and empathetic", "type": "S" },
+      { "text": "Clear and well-documented", "type": "C" }
+    ]
+  },
+  {
+    "id": 12,
+    "question": "If something doesn’t go as planned, I:",
+    "options": [
+      { "text": "Adapt quickly and push forward", "type": "D" },
+      { "text": "Stay optimistic and find the fun in it", "type": "I" },
+      { "text": "Stay calm and go with the flow", "type": "S" },
+      { "text": "Analyze what went wrong and fix it", "type": "C" }
+    ]
+  },
+  {
+    "id": 13,
+    "question": "When giving feedback, I:",
+    "options": [
+      { "text": "Say it straight, no sugarcoating", "type": "D" },
+      { "text": "Try to make it positive and encouraging", "type": "I" },
+      { "text": "Consider the person’s feelings", "type": "S" },
+      { "text": "Stick to facts and evidence", "type": "C" }
+    ]
+  },
+  {
+    "id": 14,
+    "question": "I respond best to leadership that is:",
+    "options": [
+      { "text": "Confident and decisive", "type": "D" },
+      { "text": "Charismatic and engaging", "type": "I" },
+      { "text": "Supportive and fair", "type": "S" },
+      { "text": "Organized and knowledgeable", "type": "C" }
+    ]
+  },
+  {
+    "id": 15,
+    "question": "My biggest strength is:",
+    "options": [
+      { "text": "Drive and determination", "type": "D" },
+      { "text": "Optimism and enthusiasm", "type": "I" },
+      { "text": "Loyalty and patience", "type": "S" },
+      { "text": "Precision and thoroughness", "type": "C" }
+    ]
+  },
+  {
+    "id": 16,
+    "question": "My weakness might be:",
+    "options": [
+      { "text": "Being too forceful or impatient", "type": "D" },
+      { "text": "Being too impulsive or talkative", "type": "I" },
+      { "text": "Avoiding conflict or change", "type": "S" },
+      { "text": "Overanalyzing or being too critical", "type": "C" }
+    ]
+  },
+  {
+    "id": 17,
+    "question": "I handle deadlines by:",
+    "options": [
+      { "text": "Working fast to beat the clock", "type": "D" },
+      { "text": "Keeping it light and fun", "type": "I" },
+      { "text": "Staying consistent and steady", "type": "S" },
+      { "text": "Managing time carefully with a checklist", "type": "C" }
+    ]
+  },
+  {
+    "id": 18,
+    "question": "I usually deal with conflict by:",
+    "options": [
+      { "text": "Confronting it head-on", "type": "D" },
+      { "text": "Trying to smooth things over socially", "type": "I" },
+      { "text": "Avoiding it if possible", "type": "S" },
+      { "text": "Looking for a rational solution", "type": "C" }
+    ]
+  },
+  {
+    "id": 19,
+    "question": "I prefer to work with:",
+    "options": [
+      { "text": "People who get things done", "type": "D" },
+      { "text": "People who are fun and outgoing", "type": "I" },
+      { "text": "People who are dependable", "type": "S" },
+      { "text": "People who are accurate and prepared", "type": "C" }
+    ]
+  },
+  {
+    "id": 20,
+    "question": "I am more likely to be described as:",
+    "options": [
+      { "text": "Assertive", "type": "D" },
+      { "text": "Outgoing", "type": "I" },
+      { "text": "Gentle", "type": "S" },
+      { "text": "Precise", "type": "C" }
+    ]
+  },
+  {
+    "id": 21,
+    "question": "I prefer tasks that are:",
+    "options": [
+      { "text": "Challenging and goal-oriented", "type": "D" },
+      { "text": "Social and interactive", "type": "I" },
+      { "text": "Routine and structured", "type": "S" },
+      { "text": "Analytical and detailed", "type": "C" }
+    ]
+  },
+  {
+    "id": 22,
+    "question": "I feel stressed when:",
+    "options": [
+      { "text": "I have no control", "type": "D" },
+      { "text": "Things get boring or repetitive", "type": "I" },
+      { "text": "There’s too much change", "type": "S" },
+      { "text": "Things are chaotic or unclear", "type": "C" }
+    ]
+  },
+  {
+    "id": 23,
+    "question": "I’m at my best when I can:",
+    "options": [
+      { "text": "Compete and win", "type": "D" },
+      { "text": "Inspire and entertain", "type": "I" },
+      { "text": "Help and support", "type": "S" },
+      { "text": "Solve problems logically", "type": "C" }
+    ]
+  },
+  {
+    "id": 24,
+    "question": "In group projects, I usually:",
+    "options": [
+      { "text": "Take charge of the direction", "type": "D" },
+      { "text": "Keep everyone excited and involved", "type": "I" },
+      { "text": "Keep things peaceful and on track", "type": "S" },
+      { "text": "Ensure the plan is followed properly", "type": "C" }
+    ]
+  },
+  {
+    "id": 25,
+    "question": "When I fail, I usually:",
+    "options": [
+      { "text": "Try again even harder", "type": "D" },
+      { "text": "Laugh it off and move on", "type": "I" },
+      { "text": "Take it personally", "type": "S" },
+      { "text": "Reflect on what I could do better", "type": "C" }
+    ]
+  },
+  {
+    "id": 26,
+    "question": "I prefer instructions that are:",
+    "options": [
+      { "text": "Brief and outcome-focused", "type": "D" },
+      { "text": "Flexible and open-ended", "type": "I" },
+      { "text": "Clear and step-by-step", "type": "S" },
+      { "text": "Detailed and logical", "type": "C" }
+    ]
+  },
+  {
+    "id": 27,
+    "question": "My energy comes from:",
+    "options": [
+      { "text": "Action and results", "type": "D" },
+      { "text": "Interaction and attention", "type": "I" },
+      { "text": "Cooperation and routine", "type": "S" },
+      { "text": "Structure and understanding", "type": "C" }
+    ]
+  },
+  {
+    "id": 28,
+    "question": "I approach risks by:",
+    "options": [
+      { "text": "Taking them confidently", "type": "D" },
+      { "text": "Taking them if they seem fun", "type": "I" },
+      { "text": "Avoiding them when possible", "type": "S" },
+      { "text": "Calculating carefully before acting", "type": "C" }
+    ]
+  },
+  {
+    "id": 29,
+    "question": "I prefer meetings that are:",
+    "options": [
+      { "text": "Efficient and productive", "type": "D" },
+      { "text": "Fun and collaborative", "type": "I" },
+      { "text": "Calm and orderly", "type": "S" },
+      { "text": "Structured and informative", "type": "C" }
+    ]
+  },
+  {
+    "id": 30,
+    "question": "I define success as:",
+    "options": [
+      { "text": "Achieving big goals", "type": "D" },
+      { "text": "Being liked and appreciated", "type": "I" },
+      { "text": "Helping others and making a difference", "type": "S" },
+      { "text": "Doing things right and thoroughly", "type": "C" }
     ]
   }
 ]

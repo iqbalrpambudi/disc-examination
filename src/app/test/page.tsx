@@ -30,6 +30,13 @@ export default function TestPage() {
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const question = questions[currentQuestion];
   
+  // Redirect to email page if questions are not loaded
+  useEffect(() => {
+    if (isEmailSubmitted && questions.length === 0) {
+      router.push('/email');
+    }
+  }, [isEmailSubmitted, questions.length, router]);
+  
   // Timer effect
   useEffect(() => {
     if (!testStartTime) return;
@@ -45,7 +52,7 @@ export default function TestPage() {
 
   // Set selected option based on existing answers
   useEffect(() => {
-    if (answers[question.id]) {
+    if (question && answers[question.id]) {
       const index = question.options.findIndex(
         (option) => option.type === answers[question.id].type
       );
@@ -70,6 +77,18 @@ export default function TestPage() {
     }
   };
 
+  // Show loading or redirect if questions are not loaded
+  if (!question || questions.length === 0) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center p-6">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mx-auto mb-4"></div>
+          <p className="text-gray-600 dark:text-gray-400">Loading test questions...</p>
+        </div>
+      </div>
+    );
+  }
+
   const progress = ((currentQuestion + 1) / questions.length) * 100;
 
   return (
@@ -93,10 +112,10 @@ export default function TestPage() {
           </div>
         </div>
 
-        <h1 className="text-2xl font-bold mb-6">{question.question}</h1>
+        <h1 className="text-2xl font-bold mb-6">{question?.question}</h1>
 
         <div className="space-y-4 mb-8">
-          {question.options.map((option, index) => (
+          {question?.options.map((option, index) => (
             <button
               key={index}
               onClick={() => handleOptionSelect(index)}
